@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --HEADER-BOTTOM-BORDER: 3px solid #000;
+  --RIGHT-PARAGRAPHS: #000;
+  --HEADER-COLOR: #000;
+  --BG-COLOR: radial-gradient(
+    rgba(225, 225, 225, 0.9),
+    rgba(225, 250, 250, 0.9)
+  );
+}
+
+body {
+  background-image: radial-gradient(
+    rgba(210, 0, 20, 0.2),
+    rgba(255, 0, 0, 0.5)
+  );
+  font-family: 'Press Start 2P', cursive;
+  height: 100vh;
+}
+.container {
+  margin: 20px auto;
+  background-image: var(--BG-COLOR);
+  height: calc(100% - 5vh);
+  width: 80%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --HEADER-BOTTOM-BORDER: 3px solid #fff;
+    --RIGHT-PARAGRAPHS: #fff;
+    --HEADER-COLOR: #fff;
+    --BG-COLOR: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
+  }
+}
+
+header {
+  border-bottom: var(--HEADER-BOTTOM-BORDER);
+  min-height: calc(60vh - 10rem);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+header h1 {
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  color: var(--HEADER-COLOR);
+  font-size: clamp(0.5rem, 3vw, 3rem);
+  /* font-size: 0.5rem; */
+}
+.again {
+  position: absolute;
+  left: 5px;
+  top: 3px;
+  padding: 0.5rem 1rem;
+  font-size: 1.5em;
+}
+.between {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.number {
+  background-color: #fff;
+  width: clamp(8rem, 3vw, 12rem);
+  padding: 1em 1.5em;
+  font-size: 2rem;
+  position: absolute;
+  bottom: -30px;
+  left: 40%;
+  font-weight: bolder;
+  color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  place-content: center;
+}
+main {
+  /* border: 2px solid yellow; */
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  /* padding: 2rem; */
+}
+.left {
+  width: 40%;
+  /* border: 2px dotted firebrick; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.right {
+  width: 40%;
+  /* border: 2px dotted firebrick; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  color: var(--RIGHT-PARAGRAPHS);
+}
+.right p {
+  font-size: 1rem;
+  white-space: nowrap;
+}
+.guess {
+  width: 5em;
+  height: 3rem;
+  font-size: 2rem;
+  padding: 1rem;
+}
+.check {
+  width: 6rem;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input,
+button {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
